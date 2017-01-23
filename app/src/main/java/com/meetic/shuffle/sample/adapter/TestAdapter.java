@@ -3,11 +3,12 @@ package com.meetic.shuffle.sample.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.meetic.shuffle.Shuffle;
 import com.meetic.shuffle.sample.R;
 
 public class TestAdapter extends Shuffle.Adapter<TestShuffleViewHolder> {
+
+    public static final int ITEM_COUNT = 20;
 
     boolean displayText = false;
 
@@ -28,13 +29,13 @@ public class TestAdapter extends Shuffle.Adapter<TestShuffleViewHolder> {
 
     @Override
     public void onBindViewHolder(TestShuffleViewHolder viewHolder, int position) {
-        if(displayText){
+        if (displayText) {
             viewHolder.bind(position);
         }
     }
 
     @Override
     public int getItemCount() {
-        return 20;
+        return ITEM_COUNT;
     }
 }
